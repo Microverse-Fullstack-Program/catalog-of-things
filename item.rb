@@ -20,4 +20,14 @@ class Item
   def label(label)
     @label = label
   end
+
+  def can_be_archived?
+    @publish_date > 10
+  end
+
+  def move_to_archive
+    return unless can_be_archived?
+
+    true
+  end
 end
