@@ -24,6 +24,20 @@ class App
       call_action(option)
     end
   end
+
+  def call_action(option)
+    case option
+    when 1
+      # To do: call Book catalog menu here
+    when 2
+      # To do: call MusicAlbum menu here
+    when 3
+      # To do: call Game menu here
+    when 4
+      puts 'Thank You for using this app!'
+      exit 0
+    end
+  end
 end
 
 app = App.new
