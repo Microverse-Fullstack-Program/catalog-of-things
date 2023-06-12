@@ -1,24 +1,15 @@
 class Item
+  attr_accessor :genre, :author, :source, :label
+  attr_reader :id, :publish_date, :archived, 
+
   def initialize(id, publish_date, archived)
     @id = id
     @publish_date = publish_date
     @archived = archived
-  end
-
-  def genre(genre)
-    @genre = genre
-  end
-
-  def author(author)
-    @author = author
-  end
-
-  def source(source)
-    @source = source
-  end
-
-  def label(label)
-    @label = label
+    @genre = nil
+    @author = nil
+    @source = nil
+    @label = nil
   end
 
   def can_be_archived?
