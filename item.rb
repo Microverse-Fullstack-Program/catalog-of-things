@@ -1,7 +1,6 @@
 class Item
   def initialize(id, publish_date, archived)
     @id = id
-    @source = source
     @publish_date = publish_date
     @archived = archived
   end
