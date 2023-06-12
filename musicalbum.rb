@@ -7,5 +7,10 @@ class MusicAlbum < Item
         @title = title
         @on_spotify = false
     end
+    
+    def can_be_archived?
+        true if super && @on_spotify
 
+        false
+    end
 end
