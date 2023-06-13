@@ -10,10 +10,10 @@ require_relative '../modules/preserve_genre'
 class MusicAlbumHelper
   include AddMusicAlbum
   include ListMusicAlbums
-  include PreserveMusicAlbum
+  include PreserveMusicAlbums
   include AddGenre
   include ListGenres
-  include PreserveGenre
+  include PreserveGenres
 
   attr_accessor :music_album, :genres
 
