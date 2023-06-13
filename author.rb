@@ -7,8 +7,8 @@ class Author
     @items = []
   end
 
-  def add_item(publish_date, archived)
-    item = Item.new(publish_date, archived)
+  def add_item(item)
     @items << item
+    item.author(self)
   end
 end
