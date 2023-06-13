@@ -1,6 +1,14 @@
-class Game
-  def initialize(multiplayer, last_played_at)
+require_relative 'item'
+class Game < Item
+  def initialize(multiplayer, last_played_at, publish_date, archived)
+    super(publish_date, archived)
     @multiplayer = multiplayer
     @last_played_at = last_played_at
+  end
+
+  def can_be_archived?
+    return true if super && @last_played_at > 2
+
+    false
   end
 end
