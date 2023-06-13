@@ -1,6 +1,8 @@
+require_relative './classes/musicalbum_helper'
+
 class App
   def initialize
-    # To do: inialize the Book, MusicAlbum and Game classes here
+    @musicalbum_helper = MusicAlbumHelper.new
   end
 
   def main_menu
@@ -30,7 +32,7 @@ class App
     when 1
       # To do: call Book catalog menu here
     when 2
-      # To do: call MusicAlbum menu here
+      @musicalbum_helper.music_album_menu
     when 3
       # To do: call Game menu here
     when 4
