@@ -1,3 +1,4 @@
+require 'date'
 require_relative 'item'
 class Game < Item
   def initialize(multiplayer, last_played_at, publish_date, archived)
@@ -7,7 +8,7 @@ class Game < Item
   end
 
   def can_be_archived?
-    return true if super && @last_played_at > 2
+    return true if super && @last_played_at.year - Date.today.year > 2
 
     false
   end
