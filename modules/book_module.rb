@@ -1,13 +1,11 @@
 module BookModule
   def new_book_creator(book)
-    begin
     label = label_getter
     label.add_item(book)
     @books << book
   rescue NoMethodError
     puts 'Invalid label, please try again'
     new_book_creator(book)
-  end
   end
 
   def cover_state_getter

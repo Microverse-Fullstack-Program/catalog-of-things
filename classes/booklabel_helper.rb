@@ -14,15 +14,15 @@ class BookLabelHelper
   include LabelModule
   include LabelStorage
   include BookStorage
- 
+
 
   attr_reader :books
 
-  def initialize 
+  def initialize
     @labels = []
     @books = []
-
   end
+
   def books_and_labels_menu()
     puts
     puts 'Welcome to books catalog, Please select an Option: '
@@ -47,12 +47,13 @@ class BookLabelHelper
       perform_action(choice)
     end
   end
+
   def perform_action(option)
     case option
     when 1
-      list_all_books()
+      list_all_books
     when 2
-      list_all_labels()
+      list_all_labels
     when 3
       add_book
     when 4
@@ -64,8 +65,6 @@ class BookLabelHelper
     end
   end
 
- public
- 
   def save
     save_labels
     save_books

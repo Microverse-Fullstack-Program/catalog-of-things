@@ -52,4 +52,3 @@ end
 app = App.new
 
 app.main_menu
-

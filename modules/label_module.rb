@@ -10,7 +10,7 @@ module LabelModule
   end
 
   def select_label(index)
-    puts "Im running"
+    puts 'Im running'
     if index < @labels.length && index >= 0
       @labels[index]
     elsif index == -1
@@ -25,7 +25,7 @@ module LabelModule
   end
 
   def label_getter
-    puts "I entered the label getter"
+    puts 'I entered the label getter'
     puts('Select label from the list:')
     list_all_labels
     puts('0. Create a new label')
