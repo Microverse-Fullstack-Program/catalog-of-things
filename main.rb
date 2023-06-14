@@ -2,7 +2,7 @@ require_relative './classes/musicalbum_helper'
 require_relative './classes/game_author_helper'
 class App
   def initialize
-    # @musicalbum_helper = MusicAlbumHelper.new
+    @musicalbum_helper = MusicAlbumHelper.new
     @game_author_helper = GameAuthorHelper.new
   end
 
@@ -33,7 +33,7 @@ class App
     when 1
       # To do: call Book catalog menu here
     when 2
-      # @musicalbum_helper.music_album_menu
+      @musicalbum_helper.music_album_menu
     when 3
       @game_author_helper.games_and_authors_menu
     when 4
