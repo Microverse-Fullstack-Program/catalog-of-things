@@ -1,4 +1,4 @@
-require_relative '../classes/music_album'
+require_relative '../classes/musicalbum'
 
 module AddMusicAlbum
   def add_music_album(musicalbums)

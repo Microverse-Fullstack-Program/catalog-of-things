@@ -12,7 +12,7 @@ class MusicAlbum < Item
   end
 
   def can_be_archived?
-    return true if super && %w[y Y].include?(@on_spotify)
+    return true if super && %w[y Y yes Yes].include?(@on_spotify)
 
     false
   end
