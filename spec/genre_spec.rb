@@ -11,6 +11,13 @@ describe Genre do
     end
   end
 
+  context 'when genre object created' do
+    it 'Should return the name to be Hip Hop' do
+      expect(@genre.name).to eq 'Hip Hop'
+    end
 
+    it 'Should return the items to be an empty array' do
+      expect(@genre.items).to eq []
+    end
   end
 end
