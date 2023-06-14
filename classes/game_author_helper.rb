@@ -1,26 +1,28 @@
 require_relative '../modules/list_games'
 require_relative '../modules/list_authors'
 require_relative '../modules/add_game'
+require_relative '../modules/add_author'
 
 class GameAuthorHelper
   include ListGames
   include ListAuthors
   include AddGame
+  include AddAuthor
 
   def initialize
     @games = []
     @authors = []
   end
 
-    def games_menu()
+  def games_and_authors_menu()
     puts
     puts 'Welcome to games catalog, Please select an Option: '
 
     loop do
       options = [
         '1 - List all games', '2 - List all authors',
-        '3 - Add new game', '4 - Back to Main Menu',
-        '5 - Quit'
+        '3 - Add new game', '4 - Add new author', '5 - Back to Main Menu',
+        '6 - Quit'
       ]
 
       puts '------------------------'
@@ -29,7 +31,7 @@ class GameAuthorHelper
       print 'option: '
       choice = gets.chomp.to_i
 
-      if choice == 4
+      if choice == 5
         puts 'You Are Back to Main Menu'
         break
       end
@@ -44,14 +46,13 @@ class GameAuthorHelper
     when 2
       list_authors(@authors)
     when 3
-      add_music_album(@music_albums)
-      add_genre(@genres)
-    when 5
-      write_file
+      add_game(@games)
+    when 4
+      add_author(@authors)
+    when 6
       exit
     else
       puts 'Invalid Option'
     end
   end
-
 end
