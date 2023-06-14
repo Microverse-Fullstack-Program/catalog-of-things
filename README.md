@@ -78,7 +78,7 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites <a name="prerequisites"></a>
 
-In order to run this project you need [Ruby](https://www.ruby-lang.org/en/) installed on your machine.
+In order to run this project you need [Ruby](https://www.ruby-lang.org/en/) and [RSpec](https://rspec.info/) installed on your machine.
 
 
 ### Setup <a name="setup"></a>
@@ -106,29 +106,28 @@ Install this project with:
 To run the project, execute the following command:
 
 ```sh
-  ruby menu.rb
+  ruby main.rb
 ```
 
 ### Run tests <a name="run-tests"></a>
 
-To run tests, run the following command:
+To run tests, run the following command for each test file:
 
 ```sh
   cd spec
   rspec classname_spec.rb
 ```
-## Rspec Tests
+
+## Rspec Tests Screenshoot
 <img src="./images/rspectests.png" />
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-    - [👤 ****:](#-ismail-ali)
-    - [👤 ****:](#-Salomon-Tshobohwa)
 
 ## ✍️ Authors <a name="authors"></a>
 
 ### 👤 **Chere Lemma**
 
-- GitHub: [@githubhandle](https://github.com/cherelemma)
+- GitHub: [@cherelemma](https://github.com/cherelemma)
 - LinkedIn: [@chere-lemma27211613](https://www.linkedin.com/in/chere-lemma27211613)
 - Twitter: [@twitterhandle](https://twitter.com/Chere21271613)
 
