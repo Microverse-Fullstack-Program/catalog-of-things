@@ -30,8 +30,7 @@ class BookLabelHelper
     loop do
       options = [
         '1 - List all books', '2 - List all labels',
-        '3 - Add new book', '4 - Add new Label', '5 - Back to Main Menu',
-        '6 - Quit'
+        '3 - Add new book', '4 - Back to Main Menu'
       ]
 
       puts '------------------------'
@@ -57,8 +56,7 @@ class BookLabelHelper
     when 3
       add_book
     when 4
-
-    when 6
+      puts 'Go to the main page'
       exit
     else
       puts 'Invalid Option'
@@ -66,12 +64,12 @@ class BookLabelHelper
   end
 
   def save
-    save_labels
     save_books
+    save_labels
   end
 
   def load
-    load_labels
     load_books
+    load_labels
   end
 end
