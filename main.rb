@@ -1,8 +1,9 @@
 require_relative './classes/musicalbum_helper'
-
+require_relative './classes/game_author_helper'
 class App
   def initialize
     @musicalbum_helper = MusicAlbumHelper.new
+    @game_author_helper = GameAuthorHelper.new
   end
 
   def main_menu
@@ -34,7 +35,7 @@ class App
     when 2
       @musicalbum_helper.music_album_menu
     when 3
-      # To do: call Game menu here
+      @game_author_helper.games_and_authors_menu
     when 4
       puts 'Thank You for using this app!'
       exit 0
