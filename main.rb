@@ -1,8 +1,9 @@
 require_relative './classes/musicalbum_helper'
-
+require_relative './classes/game_author_helper'
 class App
   def initialize
     @musicalbum_helper = MusicAlbumHelper.new
+    @game_author_helper = GameAuthorHelper.new
   end
 
   def main_menu
