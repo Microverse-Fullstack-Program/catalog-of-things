@@ -26,7 +26,7 @@ CREATE TABLE genres (
 
 ------------ Create author table ---------------------
 
-CREATE TABLE author (
+CREATE TABLE authors (
   author_id SERIAL PRIMARY KEY,
   first_name VARCHAR(100)
   last_name VARCHAR(100)
