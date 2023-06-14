@@ -27,7 +27,7 @@ describe MusicAlbum do
 
   context 'when invalid publish date is given' do
     it 'Should raise an error when publish date is not in YYYY-MM-DD format' do
-      expect {MusicAlbum.new('Woy Fikir', 'yes', '1994')}.to raise_error(ArgumentError)
+      expect { MusicAlbum.new('Woy Fikir', 'yes', '1994') }.to raise_error(ArgumentError)
     end
   end
 
