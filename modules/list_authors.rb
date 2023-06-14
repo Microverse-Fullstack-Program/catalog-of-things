@@ -3,8 +3,9 @@ module ListAuthors
     return puts 'Authors list is empty' if authors.empty?
 
     authors.each do |author, index|
-      puts if (index % 3).zero?
-      print "author #{index + 1}: #{author}   "
+      puts
+      puts "author #{index + 1}:"
+      puts "first nam: #{author.first_name},  last name: #{author.last_name}"
     end
   end
 end
