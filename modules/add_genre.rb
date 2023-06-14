@@ -1,4 +1,4 @@
-require_relative '../genre'
+require_relative '../classes/genre'
 
 module AddGenre
   def add_genre(genres)

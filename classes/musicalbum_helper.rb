@@ -1,19 +1,19 @@
 require_relative 'music_album'
-require_relative 'modules/add_music_album'
-require_relative 'modules/list_music_albums'
-require_relative 'modules/preserve_music_album'
+require_relative '../modules/add_music_album'
+require_relative '../modules/list_music_albums'
+require_relative '../modules/preserve_music_album'
 require_relative 'genre'
-require_relative 'modules/add_genre'
-require_relative 'modules/list_genres'
-require_relative 'modules/preserve_genre'
+require_relative '../modules/add_genre'
+require_relative '../modules/list_genres'
+require_relative '../modules/preserve_genre'
 
 class MusicAlbumHelper
   include AddMusicAlbum
   include ListMusicAlbums
-  include PreserveMusicAlbum
+  include PreserveMusicAlbums
   include AddGenre
   include ListGenres
-  include PreserveGenre
+  include PreserveGenres
 
   attr_accessor :music_album, :genres
 
