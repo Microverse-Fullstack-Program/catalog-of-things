@@ -24,7 +24,7 @@ describe MusicAlbum do
       expect(@music_album.on_spotify).to eq 'yes'
     end
   end
-  
+
   context 'check if the music album can be archived' do
     it 'Should return false when release date is not older than 10 years' do
       music_album = MusicAlbum.new('Woy Fikir', 'yes', '2020-07-13')
@@ -37,7 +37,8 @@ describe MusicAlbum do
     end
 
     it 'Should return true when release date is older than 10 years and on_spotify is true' do
-      music_album = MusicAlbum.new('Woy Fikir', 'yes', '2001/11/13')
+      MusicAlbum.new('Woy Fikir', 'yes', '2001/11/13')
       expect(@music_album.archived).to be true
     end
+  end
 end
