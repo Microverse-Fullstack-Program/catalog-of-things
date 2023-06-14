@@ -2,16 +2,23 @@ require_relative '../modules/list_games'
 require_relative '../modules/list_authors'
 require_relative '../modules/add_game'
 require_relative '../modules/add_author'
+require_relative '../modules/preserve_games'
 
 class GameAuthorHelper
   include ListGames
   include ListAuthors
   include AddGame
   include AddAuthor
+  include PreserveGamesAndAuthors
 
   def initialize
-    @games = []
-    @authors = []
+    @games = read_games_file
+    @authors = read_author_file
+  end
+
+  def write_files
+    write_games(@games)
+    write_authors(@authors)
   end
 
   def games_and_authors_menu()
@@ -32,6 +39,7 @@ class GameAuthorHelper
       choice = gets.chomp.to_i
 
       if choice == 5
+        write_files
         puts 'You Are Back to Main Menu'
         break
       end
@@ -50,6 +58,7 @@ class GameAuthorHelper
     when 4
       add_author(@authors)
     when 6
+      write_files
       exit
     else
       puts 'Invalid Option'
