@@ -23,3 +23,5 @@ class Label
     }.to_json(*args)
   end
 end
+
+
