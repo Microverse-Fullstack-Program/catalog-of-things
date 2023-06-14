@@ -34,7 +34,6 @@ class MusicAlbumHelper
         '3 - Add MusicAlbum', '4 - Exit',
         '5 - Quit'
       ]
-
       puts '------------------------'
       puts options
       puts '------------------------'
