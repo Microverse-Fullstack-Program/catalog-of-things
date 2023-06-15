@@ -25,6 +25,7 @@ CREATE TABLE genres (
 );
 
 
+
 ----------- CREATE LABEL AND BOOKS TABLE ------------
 
 CREATE TABLE book (
@@ -47,68 +48,28 @@ CREATE TABLE label (
 ALTER TABLE book ADD CONSTRAINT fk_label FOREIGN KEY(label_id) REFERENCES label(id);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+------------ Create author table ---------------------
+
+CREATE TABLE authors (
+  author_id SERIAL PRIMARY KEY,
+  first_name VARCHAR(100)
+  last_name VARCHAR(100)
+)
+
+----------- Create Game class ------------------------
+
+CREATE TABLE games (
+  id SERIAL PRIMARY KEY,
+  last_played_at DATE NOT NULL,
+  publish_date DATE NOT NULL,
+  archived BOOLEAN NOT NULL,
+  genre_id INT,
+  source_id INT,
+  label_id INT,
+  author_id INT,
+  CONSTRAINT fk_genre FOREIGN KEY (genre_id) REFERENCES genres(genre_id),
+  CONSTRAINT fk_label FOREIGN KEY (label_id) REFERENCES labels(label_id),
+  CONSTRAINT fk_author FOREIGN KEY (author_id) REFERENCES authors(author_id),
+  CONSTRAINT fk_source FOREIGN KEY (source_id) REFERENCES sources(source_id)
+);
 
