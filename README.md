@@ -30,7 +30,7 @@
 
 # Catalog Ruby <a name="about-project"></a>
 
-**Items Catalog** is a console app that will help you to keep a record of different types of things you own: books, music albums, movies, and games. It allow items record to be stored in JSON files and loaded on program stratup.
+**Items Catalog** is a console app that will help you to keep a record of different types of things you own: books, music albums, movies, and games. It allows items record to be stored in JSON files and loaded on the program startup.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -59,16 +59,16 @@
 
 ### Key Features <a name="key-features"></a>
 
-- Create items like book, music album and game
+- Create items like books, music albums, and game
 - List added items
 - Preserve each item's data in a separate JSON file
-- Load items record from file on start
+- Load items record from the file on start
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### 👨‍💻 Video Documentation  <a name="video-documentation"></a>
 
- [Project Description Video](#)
+ [Project Description Video](https://drive.google.com/file/d/17ggVrUlT_fhkL24Vz4LvHnhD1yQycWjs/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
