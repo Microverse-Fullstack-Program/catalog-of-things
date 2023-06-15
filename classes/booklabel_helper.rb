@@ -8,16 +8,14 @@ require_relative '../modules/label_storage'
 require_relative '../modules/book_storage'
 require 'date'
 
-
 class BookLabelHelper
   include BookModule
   include LabelModule
   include LabelStorage
   include BookStorage
 
-
   attr_reader :books
-
+  
   def initialize
     @labels = []
     @books = []
