@@ -4,5 +4,11 @@
     "last_played_at": "2022-06-12",
     "publish_date": "2022-12-12",
     "archived": false
+  },
+  {
+    "multiplayer": true,
+    "last_played_at": "2023-12-06",
+    "publish_date": "2023-05-12",
+    "archived": false
   }
 ]

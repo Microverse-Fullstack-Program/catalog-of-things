@@ -31,7 +31,7 @@ class MusicAlbumHelper
     loop do
       options = [
         '1 - List All MusicAlbums', '2 - List All Genres',
-        '3 - Add MusicAlbum', '4 - Exit',
+        '3 - Add MusicAlbum', '4 - Back to Main Menu',
         '5 - Quit'
       ]
       puts '------------------------'
