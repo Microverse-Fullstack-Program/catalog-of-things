@@ -6,14 +6,12 @@ class Item
 
   def initialize(publish_date = nil, _archived = nil)
     @id = Random.rand(1000)
-
-
     @publish_date = publish_date
-    @archived = archived
+    @archived = can_be_archived?
     @genre = nil
     @author = nil
     @source = nil
-    @label = label
+    @label = nil
   end
 
   def can_be_archived?

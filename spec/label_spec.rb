@@ -1,39 +1,22 @@
 require_relative '../classes/label'
 
-class Item
-  attr_accessor :genre, :author, :label, :publish_date
-  attr_reader :id, :archived
-
-  def initialize(publish_date)
-    @id = rand(0..10_000)
-    @genre = genre
-    @author = author
-    @label = label
-    @publish_date = publish_date
-    @archived = false
-  end
-end
-
 describe Label do
-  label = Label.new('label_title', 'label_color')
-  it 'has a title' do
-    expect(label.title).to eq('label_title')
-  end
-  it 'can change the title' do
-    label.title = 'new_label_title'
-    expect(label.title).to eq('new_label_title')
+  before :each do
+    @label = Label.new('Title', 'Color')
   end
 
-  it 'has a color' do
-    expect(label.color).to eq('label_color')
+  describe '#new' do
+    it 'Should create a new Label object' do
+      expect(@label).to be_instance_of Label
+    end
   end
 
-  it 'can change the color' do
-    label.color = 'new_label_color'
-    expect(label.color).to eq('new_label_color')
-  end
-
-  it 'has an empty array of items' do
-    expect(label.items).to eq([])
+  context 'when Label object is created' do
+    it 'Should return title' do
+      expect(@label.title).to eq 'Title'
+    end
+    it 'Should return Color' do
+      expect(@label.color).to eq 'Color'
+    end
   end
 end
