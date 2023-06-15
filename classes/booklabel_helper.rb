@@ -30,7 +30,7 @@ class BookLabelHelper
     loop do
       options = [
         '1 - List all books', '2 - List all labels',
-        '3 - Add new book', '4 - Back to Main Menu'
+        '3 - Add new book', '4 - Quit'
       ]
 
       puts '------------------------'
