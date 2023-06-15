@@ -15,7 +15,7 @@ class BookLabelHelper
   include BookStorage
 
   attr_reader :books
-  
+
   def initialize
     @labels = []
     @books = []
