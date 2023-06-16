@@ -31,7 +31,7 @@ class MusicAlbumHelper
     loop do
       options = [
         '1 - List All MusicAlbums', '2 - List All Genres',
-        '3 - Add MusicAlbum', '4 - Exit',
+        '3 - Add MusicAlbum', '4 - Main Menu',
         '5 - Quit'
       ]
       puts '------------------------'
@@ -41,7 +41,7 @@ class MusicAlbumHelper
       choice = gets.chomp.to_i
 
       if choice == 4
-        write_file
+        write_files
         puts 'You Are Back to Main Menu'
         break
       end
@@ -59,14 +59,14 @@ class MusicAlbumHelper
       add_music_album(@music_albums)
       add_genre(@genres)
     when 5
-      write_file
+      write_files
       exit
     else
       puts 'Invalid Option'
     end
   end
 
-  def write_file
+  def write_files
     write_music_album(@music_albums)
     write_genre(@genres)
     puts 'Thank You for using this app!'
