@@ -28,8 +28,8 @@ class GameAuthorHelper
     loop do
       options = [
         '1 - List all games', '2 - List all authors',
-        '3 - Add new game', '4 - Add new author', 
-        '5 - Main Menu',   '6 - Quit'
+        '3 - Add new game', '4 - Add new author',
+        '5 - Main Menu', '6 - Quit'
       ]
 
       puts '------------------------'

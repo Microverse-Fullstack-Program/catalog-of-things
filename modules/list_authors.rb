@@ -1,7 +1,7 @@
 module ListAuthors
   def list_authors(authors)
     if authors.empty?
-      puts 'Authors list is empty' 
+      puts 'Authors list is empty'
       puts 'Press enter to continue'
       gets
       return

@@ -4,7 +4,7 @@ module ListGames
       puts 'Game list is empty'
       puts 'Press enter to continue'
       gets
-      return 
+      return
     end
 
     puts
