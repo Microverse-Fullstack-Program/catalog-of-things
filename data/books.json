@@ -1,0 +1,34 @@
+[
+  {
+    "json_class": "Book",
+    "id": 930,
+    "genre": null,
+    "author": null,
+    "label": {
+      "json_class": "Label",
+      "id": 6095,
+      "title": "Label-1",
+      "color": "Blue"
+    },
+    "publish_date": "2023-04-12",
+    "archived": false,
+    "publisher": "Mega Omega",
+    "cover_state": "Good"
+  },
+  {
+    "json_class": "Book",
+    "id": 298,
+    "genre": null,
+    "author": null,
+    "label": {
+      "json_class": "Label",
+      "id": 6874,
+      "title": "Hi",
+      "color": "Hello"
+    },
+    "publish_date": "2032-03-03",
+    "archived": false,
+    "publisher": "Hello world",
+    "cover_state": "Good"
+  }
+]
