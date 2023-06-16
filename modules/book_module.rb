@@ -58,6 +58,7 @@ module BookModule
         # ", Author: #{book.author.first_name} #{book.author.last_name}, " \
         # ", Genre: #{book.genre}, " \
       end
+      puts
     else
       puts "There's no book registered"
     end
