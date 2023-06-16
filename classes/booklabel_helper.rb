@@ -19,6 +19,7 @@ class BookLabelHelper
   def initialize
     @labels = []
     @books = []
+    read_from_files
   end
 
   def books_and_labels_menu()
@@ -28,7 +29,7 @@ class BookLabelHelper
     loop do
       options = [
         '1 - List all books', '2 - List all labels',
-        '3 - Add new book', '4 - Quit'
+        '3 - Add new book', '4 - Main Menu', '5 - Quit'
       ]
 
       puts '------------------------'
@@ -37,7 +38,8 @@ class BookLabelHelper
       print 'option: '
       choice = gets.chomp.to_i
 
-      if choice == 5
+      if choice == 4
+        write_files
         puts 'You Are Back to Main Menu'
         break
       end
@@ -53,21 +55,22 @@ class BookLabelHelper
       list_all_labels
     when 3
       add_book
-    when 4
-      puts 'Go to the main page'
+    when 5
+      write_files
       exit
     else
       puts 'Invalid Option'
     end
   end
 
-  def save
-    save_books
-    save_labels
+  def write_files
+    save_labels(@labels)
+    save_books(@books)
+    puts 'Thank You for using this app!'
   end
 
-  def load
-    load_books
-    load_labels
+  def read_from_files
+    load_labels(@labels)
+    load_books(@books)
   end
 end
