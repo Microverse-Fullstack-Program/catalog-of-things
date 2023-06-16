@@ -9,5 +9,8 @@ module AddAuthor
     author = Author.new(first_name, last_name)
     authors << author
     puts 'Author created succesfully'
+    puts
+    puts 'Press any key to continue'
+    gets
   end
 end

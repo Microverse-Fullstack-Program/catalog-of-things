@@ -3,6 +3,8 @@ module ListGenres
     puts
     if genres.empty?
       puts 'No Genre found!'
+      puts 'Press enter to continue'
+      gets
       return
     end
 
@@ -16,5 +18,7 @@ module ListGenres
     puts
     puts '-' * 50
     puts
+    puts 'Press any key to continue'
+    gets
   end
 end

@@ -10,5 +10,8 @@ module AddGenre
     genre = Genre.new(name)
     genres << genre
     puts 'Genre added successfully!'
+    puts
+    puts 'Press any key to continue'
+    gets
   end
 end
