@@ -7,20 +7,23 @@ module AddGame
   include ParseToDate
   def add_game(games)
     puts 'Adding a new game:'
-    puts 'Enter publish date (DD-MM-YYYY)'
+    print 'Enter publish date (DD-MM-YYYY): '
     date_string = gets.chomp
     publish_date = parse_to_date(date_string)
-    puts 'Enter last played at date (DD-MM-YYYY)'
+    print 'Enter last played at date (DD-MM-YYYY): '
     date_string = gets.chomp
     last_played_at = parse_to_date(date_string)
-    puts 'Is the game multiplayer? [Y, N]:'
+    print 'Is the game multiplayer? [Y, N]: '
     str = gets.chomp
     multiplayer = convert_to_bool(str)
-    puts 'Is the game archived? [Y, N]:'
+    print 'Is the game archived? [Y, N]: '
     str = gets.chomp
     archived = convert_to_bool(str)
     game = Game.new(multiplayer, last_played_at, publish_date, archived)
     games << game
     puts 'Game created succesfully!'
+    puts
+    puts 'Press any key to continue'
+    gets
   end
 end

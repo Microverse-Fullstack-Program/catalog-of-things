@@ -3,6 +3,8 @@ module ListMusicAlbums
     puts
     if music_albums.empty?
       puts 'No Music Album found!'
+      puts 'Press enter to continue'
+      gets
       return
     end
 
@@ -14,5 +16,8 @@ module ListMusicAlbums
       puts "Publish Date: #{music_album.publish_date}, Archived: #{music_album.archived}"
       puts '-' * 100
     end
+    puts
+    puts 'Press any key to continue'
+    gets
   end
 end

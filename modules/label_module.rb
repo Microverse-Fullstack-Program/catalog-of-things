@@ -4,9 +4,12 @@ module LabelModule
   def list_all_labels
     if @labels.length >= 1
       @labels.each_with_index { |label, i| puts "#{i + 1} - Title: \"#{label.title}\", Color: \"#{label.color}\" " }
+      puts
     else
       puts "There's no label registered"
     end
+    puts 'Press any key to continue'
+    gets
   end
 
   def select_label(index)
