@@ -33,9 +33,7 @@ class App
   def call_action(option)
     case option
     when 1
-      @booklabel_helper.load
       @booklabel_helper.books_and_labels_menu
-      @booklabel_helper.save
     when 2
       @musicalbum_helper.music_album_menu
     when 3
