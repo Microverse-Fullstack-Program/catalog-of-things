@@ -6,7 +6,7 @@ module PreserveGamesAndAuthors
     json_data = File.read(file)
     parsed_data = JSON.parse(json_data)
     parsed_data.map do |data|
-      Game.new(data['multiplayer'], data['last_played_at'], data['publish_date'], data['archived'])
+      Game.new(data['multiplayer'], data['last_played_at'], data['publish_date'], data['archived'], id: data['id'])
     end
   rescue Errno::ENOENT
     []

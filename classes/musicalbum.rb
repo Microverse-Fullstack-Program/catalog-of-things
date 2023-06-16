@@ -4,8 +4,8 @@ require 'date'
 class MusicAlbum < Item
   attr_accessor :title, :on_spotify
 
-  def initialize(title, on_spotify, publish_date)
-    super(publish_date)
+  def initialize(title, on_spotify, publish_date, id = nil)
+    super(publish_date, id)
     @title = title
     @on_spotify = on_spotify
     @archived = can_be_archived?

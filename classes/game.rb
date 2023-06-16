@@ -3,8 +3,8 @@ require_relative 'item'
 class Game < Item
   attr_reader :multiplayer, :last_played_at, :publish_date, :archived
 
-  def initialize(multiplayer, last_played_at, publish_date, archived)
-    super(publish_date, archived)
+  def initialize(multiplayer, last_played_at, publish_date, archived, id: Random.rand(1000))
+    super(publish_date, archived, id: id)
     @multiplayer = multiplayer
     @last_played_at = last_played_at
   end
