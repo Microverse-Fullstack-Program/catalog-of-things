@@ -7,7 +7,6 @@ module LabelStorage
     return unless File.exist?('./data/labels.json')
 
     file = File.open('./data/labels.json', 'r')
-    return if file.empty?
 
     JSON.parse(File.read('./data/labels.json')).each do |label|
       new_label = Label.new(label['title'], label['color'], id: label['id'])
